@@ -11,76 +11,82 @@
       background-color: #000;
       font-family: 'Arial', sans-serif;
       margin: 0;
-      padding: 20px; /* Un poco de margen general */
+      padding: 20px;
     }
 
-    /* 2. ESTILO DE LA CAJA BLANCA (Igual que Proyectos) */
+    /* ESTILO DEL TÍTULO (Ahora fuera de la caja) */
+    h1 {
+      color: #fff;            /* Blanco */
+      text-align: center;     /* Centrado */
+      margin-top: 10px;
+      margin-bottom: 30px;
+      font-size: 2.5em;       /* Tamaño grande */
+      font-weight: bold;
+    }
+
+    /* 2. ESTILO DE LA CAJA BLANCA */
     .card {
       background-color: #ffffff;
-      max-width: 1200px;         /* Ancho máximo para que no se estire demasiado */
-      margin: 0 auto 30px auto;  /* Centrada y con margen abajo */
+      max-width: 1200px;
+      margin: 0 auto 30px auto;
       border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      overflow: hidden;          /* Para que nada se salga de los bordes redondos */
+      box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1); /* Sombra suave */
+      overflow: hidden;
     }
 
     .card-block {
-      padding: 30px; /* Espacio interior para que el contenido respire */
-    }
-
-    /* Título (Ahora dentro de la caja, por lo tanto color oscuro) */
-    h1 {
-      color: #333;
-      text-align: left; /* Alineado a la izquierda como "Proyectos" */
-      margin-top: 0;
-      margin-bottom: 25px;
-      font-size: 2em;
+      padding: 30px;
     }
 
     /* 3. ESTILO DE LA GALERÍA */
     .gallery {
       display: flex;
       flex-wrap: wrap;
-      gap: 20px; /* Espacio entre fotos */
-      justify-content: flex-start; /* Alineación */
+      gap: 20px;
+      justify-content: center; /* Centramos las fotos si sobra espacio */
     }
 
     .gallery-item {
-      /* Cálculo para 3 columnas responsivas */
-      flex: 1 1 calc(33.333% - 20px); 
-      min-width: 250px; /* Evita que se hagan muy pequeñas en móvil */
+      /* Esto define el ancho: 3 columnas aprox */
+      flex: 0 1 calc(33.333% - 20px); 
+      min-width: 280px; /* Ancho mínimo */
       text-align: center;
+      margin-bottom: 10px;
     }
 
+    /* CLAVE PARA QUE SE VEAN REGULARES */
     .gallery-item img {
       width: 100%;
-      height: auto;
+      height: 300px;       /* Altura FIJA para todas igual */
+      object-fit: cover;   /* Recorta la imagen para que no se deforme */
       display: block;
       border-radius: 4px;
       transition: transform 0.3s ease;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
 
-    /* Efecto Zoom suave al pasar el ratón por la imagen */
+    /* Efecto Zoom suave */
     .gallery-item img:hover {
-      transform: scale(1.03);
+      transform: scale(1.02);
       cursor: pointer;
     }
 
     .caption {
-      margin-top: 10px;
+      margin-top: 12px;
       font-weight: bold;
-      color: #555;
+      color: #333;
       font-size: 1rem;
     }
 
-    /* Link de volver (fuera de la caja o dentro, según prefieras) */
+    /* Link de volver */
     .back-link {
       text-align: center;
       margin-top: 20px;
+      padding-bottom: 20px;
     }
 
     .back-link a {
-      color: #fff; /* Blanco porque está sobre el fondo negro */
+      color: #fff;
       text-decoration: none;
       font-weight: bold;
       font-size: 1.1em;
@@ -95,7 +101,11 @@
     /* Ajuste para móviles */
     @media (max-width: 768px) {
       .gallery-item {
-        flex: 1 1 100%; /* En móvil, 1 columna */
+        flex: 0 1 100%; /* 1 columna en móvil */
+      }
+      .gallery-item img {
+        height: auto;   /* En móvil dejamos que la altura sea natural */
+        max-height: 400px; 
       }
     }
 
@@ -103,11 +113,11 @@
 </head>
 <body>
 
+  <h1>Autorretratos</h1>
+
   <div class="card">
     <div class="card-block">
       
-      <h1>Autorretratos</h1>
-
       <div class="gallery">
         <div class="gallery-item">
           <img src="./assets/images/peluche.jpeg" alt="La dama del peluche">
@@ -133,6 +143,7 @@
 
     </div>
   </div>
+
   <div class="back-link">
     <a href="galeria.html">← Volver a galería</a>
   </div>
