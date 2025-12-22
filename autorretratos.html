@@ -2,64 +2,55 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="./assets/corazon.ico?v=1"/>
-  <title>Autorretratos - Galería</title>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <title>Autorretratos</title>
+  
+  <link rel="icon" href="./assets/corazon.ico" type="image/x-icon">
+  <link href="./main.d8e0d294.css?v=1234" rel="stylesheet">
+
   <style>
     body {
-      background-color: #000 !important;
-      color: #fff !important;
+      background-color: #000;
+      color: #000;
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
     }
 
-    .container {
-      width: 90%;
-      max-width: 1200px;
-      margin: auto;
-      padding: 20px 0;
-    }
-
-    h1 {
+    h1, h2 {
       color: #fff;
       text-align: center;
-      font-weight: bold;
     }
 
-    a {
-      color: #1e90ff;
-      text-decoration: none;
+    .card, .card-block {
+      background-color: #fff;
+      color: #000;
+      border: none;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin: 20px auto;
+      padding: 15px;
+      max-width: 1000px;
     }
 
-    a:hover {
-      color: #afd9ee;
-    }
-
-    /* Galería estilo cajas blancas */
     .gallery {
       display: flex;
       flex-wrap: wrap;
-      gap: 20px;
+      gap: 15px;
       justify-content: center;
     }
 
     .gallery-item {
-      background-color: #fff; /* caja blanca */
-      border-radius: 10px;
+      flex: 1 1 calc(33.333% - 10px);
+      background-color: #fff;
+      border-radius: 8px;
       overflow: hidden;
-      flex: 1 1 calc(33.333% - 20px);
-      text-align: center;
-      padding: 10px;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
-      color: #000; /* texto negro */
     }
 
     .gallery-item img {
       width: 100%;
-      border-radius: 8px;
       display: block;
-      margin-bottom: 10px;
     }
 
     .gallery-item:hover {
@@ -68,49 +59,63 @@
     }
 
     .caption {
+      padding: 5px;
+      text-align: center;
       font-weight: bold;
-      margin-bottom: 0;
-      color: #000; /* texto negro */
+      color: #000;
+      background-color: #fff;
     }
+
+    .back-link {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .back-link a {
+      color: #1e90ff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
   </style>
 </head>
-<body>
 
-  <header class="container">
+<body>
+  <header>
     <h1>Autorretratos</h1>
-    <p style="text-align:center;">
-      <a href="galeria.html">← Volver a la galería</a>
-    </p>
   </header>
 
-  <main class="container">
-    <div class="gallery">
-      <div class="gallery-item">
-        <img src="./assets/images/peluche.jpeg" alt="La dama del peluche">
-        <div class="caption">La dama del peluche</div>
-      </div>
-
-      <div class="gallery-item">
-        <img src="./assets/images/ballet.jpeg" alt="Bailarina">
-        <div class="caption">Bailarina</div>
-      </div>
-
-      <div class="gallery-item">
-        <img src="./assets/images/rosa.jpeg" alt="La dama de rosa">
-        <div class="caption">La dama de rosa</div>
-      </div>
-
-      <div class="gallery-item">
-        <img src="./assets/images/velo.jpeg" alt="Alicantina">
-        <div class="caption">Alicantina</div>
-      </div>
-
-      <div class="gallery-item">
-        <img src="./assets/images/flores.jpeg" alt="En el jardín">
-        <div class="caption">En el jardín</div>
+  <main>
+    <div class="card">
+      <div class="card-block">
+        <div class="gallery">
+          <div class="gallery-item">
+            <img src="./assets/images/peluche.jpeg" alt="La dama del peluche">
+            <div class="caption">La dama del peluche</div>
+          </div>
+          <div class="gallery-item">
+            <img src="./assets/images/ballet.jpeg" alt="Bailarina">
+            <div class="caption">Bailarina</div>
+          </div>
+          <div class="gallery-item">
+            <img src="./assets/images/rosa.jpeg" alt="La dama de rosa">
+            <div class="caption">La dama de rosa</div>
+          </div>
+          <div class="gallery-item">
+            <img src="./assets/images/velo.jpeg" alt="Alicantina">
+            <div class="caption">Alicantina</div>
+          </div>
+          <div class="gallery-item">
+            <img src="./assets/images/flores.jpeg" alt="En el jardín">
+            <div class="caption">En el jardín</div>
+          </div>
+        </div>
       </div>
     </div>
-  </main>
 
+    <div class="back-link">
+      <a href="galeria.html">← Volver a galería</a>
+    </div>
+  </main>
 </body>
 </html>
