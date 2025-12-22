@@ -3,10 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <link rel="icon" href="./assets/corazon.ico?v=1"/>
+  <link rel="icon" href="./assets/corazon.ico?v=1"/>
   <title>Autorretratos - Galería</title>
   <style>
- 
     body {
       background-color: #000 !important;
       color: #fff !important;
@@ -22,38 +21,44 @@
       padding: 20px 0;
     }
 
-    h1, h2 {
+    h1 {
       color: #fff;
       text-align: center;
+      font-weight: bold;
     }
 
     a {
       color: #1e90ff;
       text-decoration: none;
     }
+
     a:hover {
       color: #afd9ee;
     }
 
-    /* Galería */
+    /* Galería estilo Conservatorio */
     .gallery {
       display: flex;
       flex-wrap: wrap;
-      gap: 15px;
+      gap: 20px;
       justify-content: center;
     }
 
     .gallery-item {
-      flex: 1 1 calc(33.333% - 10px);
       background-color: #111;
-      border-radius: 8px;
+      border-radius: 10px;
       overflow: hidden;
+      flex: 1 1 calc(33.333% - 20px);
+      text-align: center;
+      padding: 10px;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .gallery-item img {
       width: 100%;
+      border-radius: 8px;
       display: block;
+      margin-bottom: 10px;
     }
 
     .gallery-item:hover {
@@ -62,13 +67,14 @@
     }
 
     .caption {
-      padding: 10px;
-      text-align: center;
       color: #fff;
+      font-weight: bold;
+      margin-bottom: 0;
     }
   </style>
 </head>
 <body>
+
   <header class="container">
     <h1>Autorretratos</h1>
     <p style="text-align:center;">
@@ -79,27 +85,31 @@
   <main class="container">
     <div class="gallery">
       <div class="gallery-item">
-        <img src="./assets/images/peluche.jpeg" alt="Autorretrato 1">
+        <img src="./assets/images/peluche.jpeg" alt="La dama del peluche">
         <div class="caption">La dama del peluche</div>
       </div>
+
       <div class="gallery-item">
-        <img src="./assets/images/ballet.jpeg" alt="Autorretrato 2">
+        <img src="./assets/images/ballet.jpeg" alt="Bailarina">
         <div class="caption">Bailarina</div>
       </div>
+
       <div class="gallery-item">
-        <img src="./assets/images/rosa.jpeg" alt="Autorretrato 3">
+        <img src="./assets/images/rosa.jpeg" alt="La dama de rosa">
         <div class="caption">La dama de rosa</div>
       </div>
-       <div class="gallery-item">
-        <img src="./assets/images/velo.jpeg" alt="Autorretrato 3">
+
+      <div class="gallery-item">
+        <img src="./assets/images/velo.jpeg" alt="Alicantina">
         <div class="caption">Alicantina</div>
       </div>
-       <div class="gallery-item">
-        <img src="./assets/images/flores.jpeg" alt="Autorretrato 3">
+
+      <div class="gallery-item">
+        <img src="./assets/images/flores.jpeg" alt="En el jardín">
         <div class="caption">En el jardín</div>
       </div>
-      
     </div>
   </main>
+
 </body>
 </html>
