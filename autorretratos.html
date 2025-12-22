@@ -18,19 +18,23 @@
       padding: 0;
     }
 
-    h1, h2 {
+    header h1 {
       color: #fff;
       text-align: center;
+      font-family: 'Georgia', serif; /* tipografía diferente */
+      font-size: 3em; /* tamaño mayor como en Conservatorio */
+      margin: 30px 0;
     }
 
-    .card, .card-block {
-      background-color: #fff;
+    .card {
+      background-color: #fff; /* caja grande blanca de fondo */
       color: #000;
       border: none;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      margin: 20px auto;
-      padding: 15px;
+      margin: 20px auto 40px;
+      padding: 20px;
       max-width: 1000px;
+      border-radius: 12px;
     }
 
     .gallery {
@@ -46,11 +50,13 @@
       border-radius: 8px;
       overflow: hidden;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
     }
 
     .gallery-item img {
       width: 100%;
       display: block;
+      border-radius: 8px;
     }
 
     .gallery-item:hover {
@@ -60,7 +66,6 @@
 
     .caption {
       padding: 5px;
-      text-align: center;
       font-weight: bold;
       color: #000;
       background-color: #fff;
@@ -68,7 +73,7 @@
 
     .back-link {
       text-align: center;
-      margin-bottom: 30px;
+      margin: 20px 0 40px;
     }
 
     .back-link a {
@@ -76,7 +81,6 @@
       text-decoration: none;
       font-weight: bold;
     }
-
   </style>
 </head>
 
@@ -87,28 +91,26 @@
 
   <main>
     <div class="card">
-      <div class="card-block">
-        <div class="gallery">
-          <div class="gallery-item">
-            <img src="./assets/images/peluche.jpeg" alt="La dama del peluche">
-            <div class="caption">La dama del peluche</div>
-          </div>
-          <div class="gallery-item">
-            <img src="./assets/images/ballet.jpeg" alt="Bailarina">
-            <div class="caption">Bailarina</div>
-          </div>
-          <div class="gallery-item">
-            <img src="./assets/images/rosa.jpeg" alt="La dama de rosa">
-            <div class="caption">La dama de rosa</div>
-          </div>
-          <div class="gallery-item">
-            <img src="./assets/images/velo.jpeg" alt="Alicantina">
-            <div class="caption">Alicantina</div>
-          </div>
-          <div class="gallery-item">
-            <img src="./assets/images/flores.jpeg" alt="En el jardín">
-            <div class="caption">En el jardín</div>
-          </div>
+      <div class="gallery">
+        <div class="gallery-item">
+          <img src="./assets/images/peluche.jpeg" alt="La dama del peluche">
+          <div class="caption">La dama del peluche</div>
+        </div>
+        <div class="gallery-item">
+          <img src="./assets/images/ballet.jpeg" alt="Bailarina">
+          <div class="caption">Bailarina</div>
+        </div>
+        <div class="gallery-item">
+          <img src="./assets/images/rosa.jpeg" alt="La dama de rosa">
+          <div class="caption">La dama de rosa</div>
+        </div>
+        <div class="gallery-item">
+          <img src="./assets/images/velo.jpeg" alt="Alicantina">
+          <div class="caption">Alicantina</div>
+        </div>
+        <div class="gallery-item">
+          <img src="./assets/images/flores.jpeg" alt="En el jardín">
+          <div class="caption">En el jardín</div>
         </div>
       </div>
     </div>
