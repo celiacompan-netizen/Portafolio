@@ -6,35 +6,47 @@
   <link rel="icon" href="./assets/corazon.ico" type="image/x-icon">
   <title>Autorretratos - Galería</title>
   <style>
-    /* 1. ESTRUCTURA PRINCIPAL */
+    /* 1. ESTRUCTURA PRINCIPAL (Fondo negro y márgenes de página) */
     body {
-      background-color: #000; /* Fondo Negro */
+      background-color: #000;
       font-family: 'Arial', 'Helvetica', sans-serif;
       margin: 0;
-      padding: 40px 20px; /* Margen superior/inferior y lateral */
+      padding: 30px 20px; /* Espacio arriba/abajo y laterales */
       color: #333;
     }
 
-  header h1, header p {
+    /* 2. TÍTULO (FUERA de la caja, color BLANCO) */
+    h1 {
       color: #fff !important;
-      font-weight: bold;
       text-align: center;
-      margin: 5px 0;
+      margin-top: 0;
+      margin-bottom: 30px;
+      font-weight: bold;
+      font-size: 2.5em;
     }
 
-   
-    .card,
-    .card-block {
+    /* 3. CAJA BLANCA EXTERIOR (.card) - AQUÍ VA EL RELIEVE */
+    .card {
       background-color: #fff !important;
-      color: #000 !important;
+      /* Esto recupera el fondo negro a los lados: */
+      max-width: 1100px;
+      margin: 0 auto 30px auto; /* Centrada */
+      border-radius: 8px;
+      overflow: hidden;
+
+      /* --- EL ESTILO DE RELIEVE QUE QUERÍAS --- */
       border: none !important;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      margin-bottom: 20px;
-      padding: 15px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave externa */
+      /* --------------------------------------- */
     }
 
-   
-    /* 4. GALERÍA (GRID) */
+    /* 4. CAJA INTERIOR (.card-block) - SOLO PADDING Y COLOR */
+    .card-block {
+      padding: 25px; /* Espacio interior cómodo */
+      color: #000 !important; /* Texto interior negro */
+    }
+
+    /* 5. GALERÍA (GRID) - Mantenemos la estructura que funciona */
     .gallery {
       display: grid;
       grid-template-columns: repeat(6, 1fr); 
@@ -82,7 +94,8 @@
       display: block;
       border-radius: 4px;
       transition: transform 0.3s ease;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      /* Pequeña sombra en las fotos también para que resalten sobre lo blanco */
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     }
 
     .gallery-item img:hover {
@@ -97,7 +110,7 @@
       font-size: 1.1em;
     }
 
-    /* 5. LINK VOLVER */
+    /* 6. LINK VOLVER */
     .back-link {
       text-align: center;
       margin-top: 20px;
@@ -116,7 +129,7 @@
 
     /* RESPONSIVE */
     @media (max-width: 768px) {
-      .card { margin: 0 10px; } /* Menos margen negro en móvil */
+      body { padding: 10px; }
       .gallery { display: flex; flex-direction: column; }
       .gallery-item img { height: auto !important; max-height: 500px; }
     }
