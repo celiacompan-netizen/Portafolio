@@ -1,40 +1,82 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Autorretratos - Galería</title>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <meta content="description" name="description">
+  <meta name="google" content="notranslate" />
+  <meta content="Mashup templates have been developped by Orson.io team" name="author">
+
+  <!-- Favicon de Instagram -->
+  <link rel="icon" href="./assets/instagram-favicon.ico?v=1" type="image/x-icon">
+  <title>Mi portafolio</title>
+
+  <!-- CSS principal -->
+  <link href="./main.d8e0d294.css?v=1234" rel="stylesheet">
+
   <style>
-  
+    /* Fondo general del body */
     body {
       background-color: #000 !important;
-      color: #fff !important;
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
     }
 
-    .container {
-      width: 90%;
-      max-width: 1200px;
-      margin: auto;
-      padding: 20px 0;
-    }
-
-    h1, h2 {
-      color: #fff;
+    /* Header: Título y Fotógrafa en blanco y negrita */
+    header h1, header p {
+      color: #fff !important;
+      font-weight: bold;
       text-align: center;
+      margin: 5px 0;
     }
 
+    /* Cards con fondo blanco y texto negro */
+    .card,
+    .card-block {
+      background-color: #fff !important;
+      color: #000 !important;
+      border: none !important;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+      padding: 15px;
+    }
+
+    /* Títulos, párrafos, small y captions */
+    .card h2,
+    .card h3,
+    .card p,
+    .card small,
+    .caption {
+      color: #000 !important;
+      background-color: #fff !important;
+    }
+
+    /* Proyectos: nombres en negrita */
+    .caption b {
+      font-weight: bold;
+    }
+
+    /* Enlaces */
     a {
       color: #1e90ff;
       text-decoration: none;
     }
+
     a:hover {
       color: #afd9ee;
     }
 
-    /* Galería */
+    /* Imagenes responsive */
+    .img-responsive {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Galería de proyectos */
     .gallery {
       display: flex;
       flex-wrap: wrap;
@@ -44,7 +86,7 @@
 
     .gallery-item {
       flex: 1 1 calc(33.333% - 10px);
-      background-color: #111;
+      background-color: #fff;
       border-radius: 8px;
       overflow: hidden;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -57,49 +99,155 @@
 
     .gallery-item:hover {
       transform: scale(1.05);
-      box-shadow: 0 0 15px rgba(255,255,255,0.2);
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     }
 
     .caption {
-      padding: 10px;
+      padding: 5px;
       text-align: center;
-      color: #fff;
+      color: #000;
+      background-color: #fff;
     }
   </style>
 </head>
-<body>
-  <header class="container">
-    <h1>Autorretratos</h1>
-    <p style="text-align:center;">
-      <a href="galeria.html"></a>
-    </p>
-  </header>
 
-  <main class="container">
-    <div class="gallery">
-      <div class="gallery-item">
-        <img src="./assets/images/peluche.jpeg" alt="Autorretrato">
-        <div class="caption">La dama del peluche</div>
+<body>
+  <main class="content-wrapper">
+
+    <!-- Header -->
+    <header class="section-container">
+      <div style="text-align:center; padding:20px;">
+        <h1>Celia Compañ</h1>
+        <p>Fotógrafa</p>
+        <p>
+          <a href="https://instagram.com/kicebe" title="@kicebe">
+            <img src="./assets/instagram-favicon.ico" alt="Instagram" style="width:24px; vertical-align:middle;"> @kicebe
+          </a>
+        </p>
       </div>
-      <div class="gallery-item">
-        <img src="./assets/images/ballet.jpeg" alt="Autorretrato">
-        <div class="caption">ballet.jpeg</div>
+    </header>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+
+          <!-- Sobre mí -->
+          <div class="card">
+            <div class="card-block">
+              <h2>Sobre mí</h2>
+              <div class="row">
+                <div class="col-md-4">
+                  <p><img src="./assets/images/yo.jpeg" class="img-responsive" alt="Foto"></p>
+                </div>
+                <div class="col-md-8">
+                  <p>Cómo ya sabréis soy Celia, una joven que comienza en el mundo de la fotografía. Lo audiovisual siempre me ha gustado, pero por fin he decidido comenzar a tomarlo más en serio. Por ello, a mis 21 años con cuatro de los cinco años del Doble grado de Comunicación Audiovisual y Periodismo cursados, me tiro a la piscina.</p>
+                  <p>Toda mi vida la he dedicado a la danza y todavía sigo en ello, cursando el grado de Pedagogía de la Danza. Creo que por eso me gusta especialmente la fotografía de danza; sin embargo, la encuentro más complicada porque todavía no controlo del todo cómo evitar que las bailarinas salgan borrosas cuando se mueven muy rápido… Por eso, mientras practico, también estoy probando a fotografiar otras cosas.</p>
+                  <p>Hago fotos para divertirme y para ir descubriendo mi propio estilo. De momento, lo que más me atrae son las fotos en blanco y negro. Espero que os haya quedado la intriga de cómo serán mis fotos… Más abajo podéis ver algunas de ellas.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Proyectos -->
+          <div class="card">
+            <div class="card-block">
+              <h2>
+                <a href="galeria.html" target="_blank">Proyectos</a>
+              </h2>
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="gallery-item">
+                    <img src="./assets/images/angela.jpg" alt="Conservatorio de danza de Alicante">
+                    <div class="caption"><b>Conservatorio de danza de Alicante</b><br>Diciembre 2024</div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="gallery-item">
+                    <img src="./assets/images/hermita.jpeg" alt="Sesión Alicante">
+                    <div class="caption"><b>Sesión Alicante</b><br>Enero 2025</div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="gallery-item">
+                    <img src="./assets/images/velo.jpeg" alt="Autorretratos">
+                    <div class="caption"><b>Autorretratos</b><br>Junio 2025</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Educación -->
+          <div class="card">
+            <div class="card-block">
+              <h2>Educación</h2>
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="education-experience">
+                    <small class="date">2025</small>
+                    <h3 class="h5 date-title">ESCAC</h3>
+                    <p>Curso en dirección</p>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="education-experience">
+                    <small class="date">2022 - Ahora</small>
+                    <h3 class="h5 date-title">UMH</h3>
+                    <p>Doble Grado en Comunicación Audiovisual y Periodismo</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Idiomas -->
+          <div class="card">
+            <div class="card-block">
+              <h2>Idiomas</h2>
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="language-experience">
+                    <h3 class="h5">Español <small>Nativo</small></h3>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="language-experience">
+                    <h3 class="h5">Inglés <small>Alto</small></h3>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="language-experience">
+                    <h3 class="h5">Italiano <small>Medio</small></h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contacto -->
+          <div class="card">
+            <div class="card-block">
+              <h2>Contacto</h2>
+              <form action="" class="reveal-content">
+                <div class="form-group">
+                  <input type="email" class="form-control" id="email" placeholder="Email">
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" id="subject" placeholder="Asunto">
+                </div>
+                <div class="form-group">
+                  <textarea class="form-control" rows="5" placeholder="Escribe tu mensaje"></textarea>
+                </div>
+                <div class="form-group">
+                  <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+        </div>
       </div>
-     <div class="gallery-item">
-        <img src="./assets/images/rosa.jpeg" alt="Autorretrato">
-        <div class="caption">rosa.jpeg</div>
-      </div>
-        <div class="gallery-item">
-        <img src="./assets/images/velo.jpeg" alt="Autorretrato">
-        <div class="caption">velo.jpeg</div>
-      </div>
-       <div class="gallery-item">
-        <img src="./assets/images/flores.jpeg" alt="Autorretrato">
-        <div class="caption">flores.jpeg</div>
-      </div>
-    
     </div>
   </main>
 </body>
 </html>
-
