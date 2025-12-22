@@ -2,44 +2,43 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta content="IE=edge" http-equiv="X-UA-Compatible">
-  <meta content="width=device-width,initial-scale=1" name="viewport">
-  <title>Autorretratos</title>
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="./assets/corazon.ico" type="image/x-icon">
-  <link href="./main.d8e0d294.css?v=1234" rel="stylesheet">
-
+  <title>Autorretratos - Galería</title>
   <style>
+    /* Fondo general */
     body {
-      background-color: #000; /* fondo negro */
-      font-family: Arial, sans-serif;
+      background-color: #000;
+      font-family: 'Arial', sans-serif;
       margin: 0;
       padding: 0;
-      color: #000;
     }
 
+    /* Título */
     header h1 {
       color: #fff;
       text-align: center;
-      font-family: 'Georgia', serif; /* misma tipografía que Conservatorio */
-      font-size: 3em; /* mismo tamaño que Conservatorio */
-      margin: 30px 0;
+      font-size: 3em; /* Igual que Conservatorio */
+      margin: 20px 0;
+      font-weight: bold;
     }
 
+    /* Caja blanca grande que contiene todo */
     .card {
-      background-color: #fff; /* caja grande blanca */
+      background-color: #fff;
       max-width: 1200px;
-      margin: 0 auto 40px;
-      padding: 20px;
-      border-radius: 12px;
+      margin: 20px auto;
+      padding: 30px;
+      border-radius: 8px;
       box-shadow: 0 0 15px rgba(0,0,0,0.2);
     }
 
+    /* Galería */
     .gallery {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center; /* alineación de imágenes como Conservatorio */
       gap: 15px;
+      justify-content: center;
     }
 
     .gallery-item {
@@ -48,7 +47,6 @@
       border-radius: 8px;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       background-color: #fff;
-      text-align: center;
     }
 
     .gallery-item img {
@@ -63,24 +61,30 @@
 
     .caption {
       padding: 5px;
+      text-align: center;
       font-weight: bold;
       color: #000;
-      background-color: #fff;
     }
 
+    /* Link de volver */
     .back-link {
       text-align: center;
-      margin: 20px 0 40px;
+      margin: 20px 0;
     }
 
     .back-link a {
       color: #1e90ff;
       text-decoration: none;
       font-weight: bold;
+      font-size: 1.1em;
     }
+
+    .back-link a:hover {
+      color: #afd9ee;
+    }
+
   </style>
 </head>
-
 <body>
   <header>
     <h1>Autorretratos</h1>
