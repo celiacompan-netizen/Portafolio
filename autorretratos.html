@@ -6,37 +6,42 @@
   <link rel="icon" href="./assets/corazon.ico" type="image/x-icon">
   <title>Autorretratos - Galería</title>
   <style>
-    /* 1. TIPOGRAFÍA: Vuelta a Arial/Sans-serif clásico */
+    /* 1. TIPOGRAFÍA CLÁSICA (Arial) */
     body {
       background-color: #000;
-      font-family: 'Arial', 'Helvetica', sans-serif; /* Tipografía clásica */
+      font-family: 'Arial', 'Helvetica', sans-serif;
       margin: 0;
       padding: 20px;
       color: #333;
     }
 
-   h1, h2 {
+    /* TÍTULO */
+    h1 {
       color: #fff;
       text-align: center;
+      margin-top: 10px;
+      margin-bottom: 30px;
+      font-weight: bold;
+      font-size: 2.5em;
     }
 
-
+    /* 2. CAJA BLANCA CON SOMBRA INTERIOR */
     .card {
       background-color: #ffffff;
       max-width: 1200px;
       margin: 0 auto 30px auto;
       border-radius: 8px;
-      /* Sombra externa + Sombra INTERIOR (inset) más marcada */
+      /* Sombra interior marcada (inset) */
       box-shadow: 
-        0 5px 15px rgba(0,0,0,0.3),         /* Sombra externa */
-        inset 0 0 40px rgba(0,0,0,0.15);    /* Sombra INTERIOR fuerte */
+        0 5px 15px rgba(0,0,0,0.3), 
+        inset 0 0 40px rgba(0,0,0,0.15);
       overflow: hidden;
-      border: 1px solid #ddd; /* Borde sutil para definir mejor */
+      border: 1px solid #ddd;
     }
 
     .card-block {
       padding: 30px;
-      position: relative; /* Necesario para que el contenido quede sobre la sombra inset */
+      position: relative;
       z-index: 1;
     }
 
@@ -77,10 +82,17 @@
       object-fit: cover;
     }
 
-    /* --- CORRECCIÓN ESPECÍFICA PARA LA 4ª FOTO (CARA CORTADA) --- */
-    /* Esto fuerza a la imagen a alinearse desde ARRIBA hacia abajo */
+    /* --- AJUSTE DE LA 4ª FOTO (Alicantina) --- */
+    /* object-position: center 20%; 
+       El primer valor es horizontal (center).
+       El segundo valor es vertical:
+       - 0% es el tope de arriba (lo que tenías antes).
+       - 20% empuja la imagen hacia arriba un poco (bajando el encuadre).
+       - 50% es el centro exacto.
+       ¡Cambia el 20% si necesitas ajustarlo más!
+    */
     .gallery-item:nth-child(4) img {
-      object-position: top; 
+      object-position: center 20%; 
     }
 
     /* ESTILOS GENERALES DE IMAGEN */
@@ -100,7 +112,7 @@
     .caption {
       margin-top: 15px;
       font-weight: bold;
-      color: #000; /* Texto negro fuerte como pedías */
+      color: #000;
       font-size: 1.1em;
     }
 
@@ -130,7 +142,7 @@
       .gallery-item img {
         height: auto !important;
         max-height: 500px;
-        object-position: center; /* En móvil dejamos centrado normal */
+        object-position: center; 
       }
     }
   </style>
