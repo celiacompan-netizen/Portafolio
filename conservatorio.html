@@ -7,8 +7,9 @@
   <title>Conservatorio de danza de Alicante</title>
 
   
-<link rel="icon" href="./assets/corazon.ico?v=1">"image/x-icon"/>
+  <link rel="icon" href="./assets/corazon.ico" type="image/x-icon">
 
+ 
   <link href="./main.d8e0d294.css?v=1234" rel="stylesheet">
 
   <style>
@@ -18,6 +19,13 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
+    }
+
+    h1 {
+      color: #fff;
+      text-align: center;
+      font-weight: bold;
+      margin-top: 20px;
     }
 
     .card, .card-block {
@@ -30,10 +38,10 @@
       max-width: 1000px;
     }
 
-    h1, h2 {
-      color: #fff;
-      font-weight: bold;
+    h2 {
       text-align: center;
+      font-weight: bold;
+      margin-bottom: 20px;
     }
 
     .gallery {
@@ -68,6 +76,19 @@
       color: #000;
       background-color: #fff;
     }
+
+    /* Botón volver */
+    .back-link {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .back-link a {
+      color: #1e90ff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
   </style>
 </head>
 
@@ -82,27 +103,33 @@
       <div class="card-block">
         <h2>Galería de la sesión</h2>
         <div class="gallery">
+
+         <div class="gallery-item">
+  <img src="./assets/images/pasillo.jpg" alt="Foto 1 Conservatorio">
+</div>
+           <div class="gallery-item">
+  <img src="./assets/images/chica.jpg" alt="Foto 1 Conservatorio">
+</div>
+ <div class="gallery-item">
+  <img src="./assets/images/trajes.jpg" alt="Foto 1 Conservatorio">
+</div>
+           <div class="gallery-item">
+  <img src="./assets/images/contem.jpg" alt="Foto 1 Conservatorio">
+</div>
+           <div class="gallery-item">
+  <img src="./assets/images/puntas.jpg" alt="Foto 1 Conservatorio">
+</div>
+           <div class="gallery-item">
+  <img src="./assets/images/pies.jpg" alt="Foto 1 Conservatorio">
+</div>
       
-          <div class="gallery-item">
-            <img src="./assets/images/angela1.jpg" alt="Foto 1 Conservatorio">
-            <div class="caption">Foto 1</div>
-          </div>
-          <div class="gallery-item">
-            <img src="./assets/images/angela2.jpg" alt="Foto 2 Conservatorio">
-            <div class="caption">Foto 2</div>
-          </div>
-          <div class="gallery-item">
-            <img src="./assets/images/angela3.jpg" alt="Foto 3 Conservatorio">
-            <div class="caption">Foto 3</div>
-          </div>
-          <!-- Puedes añadir más fotos copiando este bloque -->
         </div>
       </div>
     </div>
 
-    <!-- Botón para volver -->
-    <div style="text-align:center; margin-bottom:30px;">
-      <a href="index.html" style="color:#1e90ff; text-decoration:none; font-weight:bold;">← Volver a Proyectos</a>
+   
+    <div class="back-link">
+      <a href="index.html">← Volver a Proyectos</a>
     </div>
   </main>
 </body>
