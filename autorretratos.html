@@ -15,32 +15,25 @@
       color: #333;
     }
 
-    /* 2. TÍTULO (FUERA de la caja, color BLANCO) */
-    h1 {
-      color: #fff !important; /* Forzamos blanco */
-      text-align: center;
-      margin-top: 0;
-      margin-bottom: 40px;
+  header h1, header p {
+      color: #fff !important;
       font-weight: bold;
-      font-size: 2.5em;
+      text-align: center;
+      margin: 5px 0;
     }
 
-    /* 3. CAJA BLANCA (CONTENEDOR) */
-    .card {
-      background-color: #fff !important;
-      max-width: 1100px;         /* ESTO RECUPERA LO NEGRO DE LOS LADOS */
-      margin: 0 auto 30px auto;  /* Centrado horizontal */
-      border-radius: 8px;
-      /* Tu sombra + sombra interior */
-      box-shadow: 0 0 15px rgba(0,0,0,0.2), inset 0 0 40px rgba(0,0,0,0.1); 
-      overflow: hidden;
-      border: none !important;
-    }
-
+   
+    .card,
     .card-block {
-      padding: 40px; /* Espacio interior generoso */
+      background-color: #fff !important;
+      color: #000 !important;
+      border: none !important;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+      padding: 15px;
     }
 
+   
     /* 4. GALERÍA (GRID) */
     .gallery {
       display: grid;
