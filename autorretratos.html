@@ -1,145 +1,104 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <title>Autorretratos</title>
+
+  
   <link rel="icon" href="./assets/corazon.ico" type="image/x-icon">
-  <title>Autorretratos - Galería</title>
+
+ 
+  <link href="./main.d8e0d294.css?v=1234" rel="stylesheet">
+
   <style>
-    /* 1. ESTRUCTURA PRINCIPAL (Fondo negro y márgenes de página) */
     body {
       background-color: #000;
-      font-family: 'Arial', 'Helvetica', sans-serif;
+      color: #000;
+      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 30px 20px; /* Espacio arriba/abajo y laterales */
-      color: #333;
+      padding: 0;
     }
 
-    /* 2. TÍTULO (FUERA de la caja, color BLANCO) */
-    h1 {
-      color: #fff !important;
+h1, h2 {
+      color: #fff;
       text-align: center;
-      margin-top: 0;
-      margin-bottom: 30px;
-      font-weight: bold;
-      font-size: 2.5em;
     }
 
-    /* 3. CAJA BLANCA EXTERIOR (.card) - AQUÍ VA EL RELIEVE */
-    .card {
-      background-color: #fff !important;
-      /* Esto recupera el fondo negro a los lados: */
-      max-width: 1100px;
-      margin: 0 auto 30px auto; /* Centrada */
-      border-radius: 8px;
-      overflow: hidden;
-
-      /* --- EL ESTILO DE RELIEVE QUE QUERÍAS --- */
-      border: none !important;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave externa */
-      /* --------------------------------------- */
+    .card, .card-block {
+      background-color: #fff;
+      color: #000;
+      border: none;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin: 20px auto;
+      padding: 15px;
+      max-width: 1000px;
     }
 
-    /* 4. CAJA INTERIOR (.card-block) - SOLO PADDING Y COLOR */
-    .card-block {
-      padding: 25px; /* Espacio interior cómodo */
-      color: #000 !important; /* Texto interior negro */
-    }
+  
 
-    /* 5. GALERÍA (GRID) - Mantenemos la estructura que funciona */
     .gallery {
-      display: grid;
-      grid-template-columns: repeat(6, 1fr); 
-      gap: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
     }
 
     .gallery-item {
-      text-align: center;
+      flex: 1 1 calc(33.333% - 10px);
+      background-color: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    /* --- FOTOS VERTICALES (3 primeras) --- */
-    .gallery-item:nth-child(1),
-    .gallery-item:nth-child(2),
-    .gallery-item:nth-child(3) {
-      grid-column: span 2; 
-    }
-
-    .gallery-item:nth-child(1) img,
-    .gallery-item:nth-child(2) img,
-    .gallery-item:nth-child(3) img {
-      height: 500px; 
-      object-fit: cover;
-    }
-
-    /* --- FOTOS HORIZONTALES (2 últimas) --- */
-    .gallery-item:nth-child(4),
-    .gallery-item:nth-child(5) {
-      grid-column: span 3; 
-    }
-
-    .gallery-item:nth-child(4) img,
-    .gallery-item:nth-child(5) img {
-      height: 380px; 
-      object-fit: cover;
-    }
-
-    /* Ajuste foto 4 (Alicantina) para que no corte la cabeza */
-    .gallery-item:nth-child(4) img {
-      object-position: center 20%; 
-    }
-
-    /* Estilos generales img */
     .gallery-item img {
       width: 100%;
       display: block;
-      border-radius: 4px;
-      transition: transform 0.3s ease;
-      /* Pequeña sombra en las fotos también para que resalten sobre lo blanco */
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     }
 
-    .gallery-item img:hover {
-      transform: scale(1.02);
-      cursor: pointer;
+    .gallery-item:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
     }
 
     .caption {
-      margin-top: 15px;
+      padding: 5px;
+      text-align: center;
       font-weight: bold;
       color: #000;
-      font-size: 1.1em;
+      background-color: #fff;
     }
 
-    /* 6. LINK VOLVER */
+  
     .back-link {
       text-align: center;
-      margin-top: 20px;
-      padding-bottom: 20px;
+      margin-bottom: 30px;
     }
 
     .back-link a {
-      color: #fff;
+      color: #1e90ff;
       text-decoration: none;
       font-weight: bold;
-      font-size: 1.2em;
-    }
-    .back-link a:hover {
-      text-decoration: underline;
     }
 
-    /* RESPONSIVE */
-    @media (max-width: 768px) {
-      body { padding: 10px; }
-      .gallery { display: flex; flex-direction: column; }
-      .gallery-item img { height: auto !important; max-height: 500px; }
-    }
   </style>
 </head>
+
 <body>
+  <header>
+    <h1>Autorretratos</h1>
+   
+  </header>
 
-  <h1>Autorretratos</h1>
+  <main>
+    <div class="card">
+      <div class="card-block">
+        <div class="gallery">
 
-  <div class="card">
+         <div class="card">
     <div class="card-block">
       
       <div class="gallery">
@@ -166,12 +125,14 @@
         </div>
       </div>
 
+        </div>
+      </div>
     </div>
-  </div>
 
+   
   <div class="back-link">
-    <a href="galeria.html">← Volver a galería</a>
-  </div>
-
+  <a href="galeria.html">← Volver a galería</a>
+</div>
+  </main>
 </body>
 </html>
