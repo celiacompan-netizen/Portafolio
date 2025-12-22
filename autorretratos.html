@@ -6,31 +6,36 @@
   <link rel="icon" href="./assets/corazon.ico" type="image/x-icon">
   <title>Autorretratos - Galería</title>
   <style>
-    /* 1. Fondo general Negro */
+    /* 1. TIPOGRAFÍA Y FONDO */
     body {
       background-color: #000;
-      font-family: 'Arial', sans-serif;
+      /* Esta pila de fuentes es la estándar moderna (estilo Bootstrap/Mac/Windows) */
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
       margin: 0;
       padding: 20px;
+      color: #333;
     }
 
-    /* ESTILO DEL TÍTULO (Ahora fuera de la caja) */
+    /* TITULO (Fuera de la caja, blanco) */
     h1 {
-      color: #fff;            /* Blanco */
-      text-align: center;     /* Centrado */
+      color: #fff;
+      text-align: center;
       margin-top: 10px;
       margin-bottom: 30px;
-      font-size: 2.5em;       /* Tamaño grande */
-      font-weight: bold;
+      font-weight: 500; /* Un poco menos grueso, más elegante */
+      font-size: 2.5rem;
     }
 
-    /* 2. ESTILO DE LA CAJA BLANCA */
+    /* 2. CAJA BLANCA CON SOMBRA INTERIOR */
     .card {
       background-color: #ffffff;
       max-width: 1200px;
       margin: 0 auto 30px auto;
       border-radius: 8px;
-      box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1); /* Sombra suave */
+      /* Aquí está la clave: Sombra normal (fuera) + Sombra interna (inset) */
+      box-shadow: 
+        0 4px 10px rgba(0,0,0,0.1),       /* Sombra externa suave */
+        inset 0 0 20px rgba(0,0,0,0.05);  /* SOMBRA INTERIOR solicitada */
       overflow: hidden;
     }
 
@@ -38,34 +43,59 @@
       padding: 30px;
     }
 
-    /* 3. ESTILO DE LA GALERÍA */
+    /* 3. GALERÍA: SISTEMA DE GRID (REJILLA) */
     .gallery {
-      display: flex;
-      flex-wrap: wrap;
+      display: grid;
+      /* Creamos 6 columnas invisibles para poder dividir:
+         - 3 fotos usarán 2 columnas cada una (2+2+2 = 6)
+         - 2 fotos usarán 3 columnas cada una (3+3 = 6) */
+      grid-template-columns: repeat(6, 1fr); 
       gap: 20px;
-      justify-content: center; /* Centramos las fotos si sobra espacio */
     }
 
     .gallery-item {
-      /* Esto define el ancho: 3 columnas aprox */
-      flex: 0 1 calc(33.333% - 20px); 
-      min-width: 280px; /* Ancho mínimo */
       text-align: center;
-      margin-bottom: 10px;
     }
 
-    /* CLAVE PARA QUE SE VEAN REGULARES */
+    /* --- CONFIGURACIÓN DE LAS 3 PRIMERAS (VERTICALES) --- */
+    /* Selecciona la foto 1, 2 y 3 */
+    .gallery-item:nth-child(1),
+    .gallery-item:nth-child(2),
+    .gallery-item:nth-child(3) {
+      grid-column: span 2; /* Ocupan 1/3 del ancho cada una */
+    }
+
+    /* Altura para las verticales */
+    .gallery-item:nth-child(1) img,
+    .gallery-item:nth-child(2) img,
+    .gallery-item:nth-child(3) img {
+      height: 500px; /* MÁS LARGO (Vertical) */
+      object-fit: cover;
+    }
+
+    /* --- CONFIGURACIÓN DE LAS 2 ÚLTIMAS (HORIZONTALES) --- */
+    /* Selecciona la foto 4 y 5 */
+    .gallery-item:nth-child(4),
+    .gallery-item:nth-child(5) {
+      grid-column: span 3; /* Ocupan la mitad del ancho cada una */
+    }
+
+    /* Altura para las horizontales */
+    .gallery-item:nth-child(4) img,
+    .gallery-item:nth-child(5) img {
+      height: 350px; /* MENOS LARGO (Horizontal/Panorámico) */
+      object-fit: cover;
+      object-position: center top; /* Enfoca un poco más arriba si se recorta */
+    }
+
+    /* ESTILOS COMUNES DE IMAGEN */
     .gallery-item img {
       width: 100%;
-      height: 300px;       /* Altura FIJA para todas igual */
-      object-fit: cover;   /* Recorta la imagen para que no se deforme */
       display: block;
       border-radius: 4px;
       transition: transform 0.3s ease;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
 
-    /* Efecto Zoom suave */
     .gallery-item img:hover {
       transform: scale(1.02);
       cursor: pointer;
@@ -73,12 +103,12 @@
 
     .caption {
       margin-top: 12px;
-      font-weight: bold;
-      color: #333;
+      font-weight: 600;
+      color: #555;
       font-size: 1rem;
     }
 
-    /* Link de volver */
+    /* VOLVER */
     .back-link {
       text-align: center;
       margin-top: 20px;
@@ -88,27 +118,26 @@
     .back-link a {
       color: #fff;
       text-decoration: none;
-      font-weight: bold;
       font-size: 1.1em;
-      border-bottom: 1px solid transparent;
-      transition: border-color 0.3s;
+      transition: opacity 0.3s;
     }
-
     .back-link a:hover {
-      border-bottom: 1px solid #fff;
-    }
-    
-    /* Ajuste para móviles */
-    @media (max-width: 768px) {
-      .gallery-item {
-        flex: 0 1 100%; /* 1 columna en móvil */
-      }
-      .gallery-item img {
-        height: auto;   /* En móvil dejamos que la altura sea natural */
-        max-height: 400px; 
-      }
+      opacity: 0.8;
+      text-decoration: underline;
     }
 
+    /* --- RESPONSIVE (MOVIL) --- */
+    @media (max-width: 768px) {
+      .gallery {
+        display: flex;
+        flex-direction: column; /* En móvil, una debajo de otra */
+      }
+      
+      .gallery-item img {
+        height: auto !important; /* Respetar altura natural en móvil */
+        max-height: 500px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -119,26 +148,32 @@
     <div class="card-block">
       
       <div class="gallery">
+        
         <div class="gallery-item">
           <img src="./assets/images/peluche.jpeg" alt="La dama del peluche">
           <div class="caption">La dama del peluche</div>
         </div>
+        
         <div class="gallery-item">
           <img src="./assets/images/ballet.jpeg" alt="Bailarina">
           <div class="caption">Bailarina</div>
         </div>
+        
         <div class="gallery-item">
           <img src="./assets/images/rosa.jpeg" alt="La dama de rosa">
           <div class="caption">La dama de rosa</div>
         </div>
+
         <div class="gallery-item">
           <img src="./assets/images/velo.jpeg" alt="Alicantina">
           <div class="caption">Alicantina</div>
         </div>
+        
         <div class="gallery-item">
           <img src="./assets/images/flores.jpeg" alt="En el jardín">
           <div class="caption">En el jardín</div>
         </div>
+
       </div>
 
     </div>
