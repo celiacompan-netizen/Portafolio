@@ -1,1 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Autorretratos - Galería</title>
+  <style>
+  
+    body {
+      background-color: #000 !important;
+      color: #fff !important;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px 0;
+    }
+
+    h1, h2 {
+      color: #fff;
+      text-align: center;
+    }
+
+    a {
+      color: #1e90ff;
+      text-decoration: none;
+    }
+    a:hover {
+      color: #afd9ee;
+    }
+
+    /* Galería */
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+    }
+
+    .gallery-item {
+      flex: 1 1 calc(33.333% - 10px);
+      background-color: #111;
+      border-radius: 8px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      display: block;
+    }
+
+    .gallery-item:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(255,255,255,0.2);
+    }
+
+    .caption {
+      padding: 10px;
+      text-align: center;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <header class="container">
+    <h1>Autorretratos</h1>
+    <p style="text-align:center;">
+      <a href="galeria.html">← Volver a la galería</a>
+    </p>
+  </header>
+
+  <main class="container">
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="./assets/images/velo1.jpeg" alt="Autorretrato">
+        <div class="caption">peluche.jpeg</div>
+      </div>
+      <div class="gallery-item">
+        <img src="./assets/images/velo2.jpeg" alt="Autorretrato">
+        <div class="caption">ballet.jpeg</div>
+      </div>
+      <div class="gallery-item">
+        <img src="./assets/images/velo3.jpeg" alt="Autorretrato">
+        <div class="caption">rosa.jpeg</div>
+      </div>
+        <div class="gallery-item">
+        <img src="./assets/images/velo3.jpeg" alt="Autorretrato">
+        <div class="caption">velo.jpeg</div>
+      </div>
+       <div class="gallery-item">
+        <img src="./assets/images/velo3.jpeg" alt="Autorretrato">
+        <div class="caption">flores.jpeg</div>
+      </div>
+    
+    </div>
+  </main>
+</body>
+</html>
 
