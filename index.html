@@ -19,25 +19,35 @@
     /* Fondo general del body */
     body {
       background-color: #000 !important;
-      color: #000 !important;
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
     }
 
     /* Cards con fondo blanco y texto negro */
-    .card, .card-block {
+    .card,
+    .card-block {
       background-color: #fff !important;
       color: #000 !important;
       border: none !important;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       margin-bottom: 20px;
       padding: 15px;
     }
 
-    /* Asegurar que todos los textos dentro de cards sean negros */
-    .card h2, .card h3, .card p, .card small, .caption {
+    /* Títulos, párrafos, small y captions */
+    .card h2,
+    .card h3,
+    .card p,
+    .card small,
+    .caption {
       color: #000 !important;
+      background-color: #fff !important;
+    }
+
+    /* Proyectos: nombres en negrita */
+    .caption b {
+      font-weight: bold;
     }
 
     /* Enlaces */
@@ -80,7 +90,7 @@
 
     .gallery-item:hover {
       transform: scale(1.05);
-      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     }
 
     .caption {
@@ -89,127 +99,144 @@
       color: #000;
       background-color: #fff;
     }
-
   </style>
 </head>
 
 <body>
-<main class="content-wrapper">
+  <main class="content-wrapper">
 
-  <!-- Header -->
-  <header class="section-container">
-    <div style="text-align:center; padding:20px;">
-      <h1>Celia Compañ</h1>
-      <p>Fotógrafa</p>
-      <p>
-        <a href="https://instagram.com/kicebe" title="@kicebe">
-          Instagram
-        </a>
-      </p>
-    </div>
-  </header>
+    <!-- Header -->
+    <header class="section-container">
+      <div style="text-align:center; padding:20px;">
+        <h1>Celia Compañ</h1>
+        <p>Fotógrafa</p>
+        <p>
+          <a href="https://instagram.com/kicebe" title="@kicebe">Instagram</a>
+        </p>
+      </div>
+    </header>
 
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
 
-        <!-- Sobre mí -->
-        <div class="card">
-          <div class="card-block">
-            <h2>Sobre mí</h2>
-            <div class="row">
-              <div class="col-md-4">
-                <p><img src="./assets/images/yo.jpeg" class="img-responsive" alt="Foto"></p>
-              </div>
-              <div class="col-md-8">
-                <p>Cómo ya sabréis soy Celia, una joven que comienza en el mundo de la fotografía. Lo audiovisual siempre me ha gustado, pero por fin he decidido comenzar a tomarlo más en serio. Por ello, a mis 21 años con cuatro de los cinco años del Doble grado de Comunicación Audiovisual y Periodismo cursados, me tiro a la piscina.</p>
-                <p>Toda mi vida la he dedicado a la danza y todavía sigo en ello, cursando el grado de Pedagogía de la Danza. Creo que por eso me gusta especialmente la fotografía de danza; sin embargo, la encuentro más complicada porque todavía no controlo del todo cómo evitar que las bailarinas salgan borrosas cuando se mueven muy rápido… Por eso, mientras practico, también estoy probando a fotografiar otras cosas.</p>
-                <p>Hago fotos para divertirme y para ir descubriendo mi propio estilo. De momento, lo que más me atrae son las fotos en blanco y negro. Espero que os haya quedado la intriga de cómo serán mis fotos… Más abajo podéis ver algunas de ellas.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Proyectos -->
-        <div class="card">
-          <div class="card-block">
-            <h2>
-              <a href="galeria.html" target="_blank">Proyectos</a>
-            </h2>
-            <div class="row">
-              <div class="col-md-4">
-                <div class="gallery-item">
-                  <img src="./assets/images/angela.jpg" alt="Conservatorio de danza de Alicante">
-                  <div class="caption">Conservatorio de danza de Alicante<br>Diciembre 2024</div>
+          <!-- Sobre mí -->
+          <div class="card">
+            <div class="card-block">
+              <h2>Sobre mí</h2>
+              <div class="row">
+                <div class="col-md-4">
+                  <p><img src="./assets/images/yo.jpeg" class="img-responsive" alt="Foto"></p>
                 </div>
-              </div>
-              <div class="col-md-4">
-                <div class="gallery-item">
-                  <img src="./assets/images/hermita.jpeg" alt="Sesión Alicante">
-                  <div class="caption">Sesión Alicante<br>Enero 2025</div>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="gallery-item">
-                  <img src="./assets/images/velo.jpeg" alt="Autorretratos">
-                  <div class="caption">Autorretratos<br>Junio 2025</div>
+                <div class="col-md-8">
+                  <p>Cómo ya sabréis soy Celia, una joven que comienza en el mundo de la fotografía. Lo audiovisual siempre me ha gustado, pero por fin he decidido comenzar a tomarlo más en serio. Por ello, a mis 21 años con cuatro de los cinco años del Doble grado de Comunicación Audiovisual y Periodismo cursados, me tiro a la piscina.</p>
+                  <p>Toda mi vida la he dedicado a la danza y todavía sigo en ello, cursando el grado de Pedagogía de la Danza. Creo que por eso me gusta especialmente la fotografía de danza; sin embargo, la encuentro más complicada porque todavía no controlo del todo cómo evitar que las bailarinas salgan borrosas cuando se mueven muy rápido… Por eso, mientras practico, también estoy probando a fotografiar otras cosas.</p>
+                  <p>Hago fotos para divertirme y para ir descubriendo mi propio estilo. De momento, lo que más me atrae son las fotos en blanco y negro. Espero que os haya quedado la intriga de cómo serán mis fotos… Más abajo podéis ver algunas de ellas.</p>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <!-- Educación -->
-        <div class="card">
-          <div class="card-block">
-            <h2>Educación</h2>
-            <div class="row">
-              <div class="col-md-4">
-                <div class="education-experience">
-                  <small class="date">2025</small>
-                  <h3 class="h5 date-title">ESCAC</h3>
-                  <p>Curso en dirección</p>
+          <!-- Proyectos -->
+          <div class="card">
+            <div class="card-block">
+              <h2>
+                <a href="galeria.html" target="_blank">Proyectos</a>
+              </h2>
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="gallery-item">
+                    <img src="./assets/images/angela.jpg" alt="Conservatorio de danza de Alicante">
+                    <div class="caption"><b>Conservatorio de danza de Alicante</b><br>Diciembre 2024</div>
+                  </div>
                 </div>
-              </div>
-              <div class="col-md-4">
-                <div class="education-experience">
-                  <small class="date">2022 - Ahora</small>
-                  <h3 class="h5 date-title">UMH</h3>
-                  <p>Doble Grado en Comunicación Audiovisual y Periodismo</p>
+                <div class="col-md-4">
+                  <div class="gallery-item">
+                    <img src="./assets/images/hermita.jpeg" alt="Sesión Alicante">
+                    <div class="caption"><b>Sesión Alicante</b><br>Enero 2025</div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="gallery-item">
+                    <img src="./assets/images/velo.jpeg" alt="Autorretratos">
+                    <div class="caption"><b>Autorretratos</b><br>Junio 2025</div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <!-- Idiomas -->
-        <div class="card">
-          <div class="card-block">
-            <h2>Idiomas</h2>
-            <div class="row">
-              <div class="col-md-4">
-                <div class="language-experience">
-                  <h3 class="h5">Español  <small>Nativo</small></h3>
+          <!-- Educación -->
+          <div class="card">
+            <div class="card-block">
+              <h2>Educación</h2>
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="education-experience">
+                    <small class="date">2025</small>
+                    <h3 class="h5 date-title">ESCAC</h3>
+                    <p>Curso en dirección</p>
+                  </div>
                 </div>
-              </div>
-              <div class="col-md-4">
-                <div class="language-experience">
-                  <h3 class="h5">Inglés  <small>Alto</small></h3>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="language-experience">
-                  <h3 class="h5">Italiano  <small>Medio</small></h3>
+                <div class="col-md-4">
+                  <div class="education-experience">
+                    <small class="date">2022 - Ahora</small>
+                    <h3 class="h5 date-title">UMH</h3>
+                    <p>Doble Grado en Comunicación Audiovisual y Periodismo</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
+          <!-- Idiomas -->
+          <div class="card">
+            <div class="card-block">
+              <h2>Idiomas</h2>
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="language-experience">
+                    <h3 class="h5">Español <small>Nativo</small></h3>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="language-experience">
+                    <h3 class="h5">Inglés <small>Alto</small></h3>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="language-experience">
+                    <h3 class="h5">Italiano <small>Medio</small></h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contacto -->
+          <div class="card">
+            <div class="card-block">
+              <h2>Contacto</h2>
+              <form action="" class="reveal-content">
+                <div class="form-group">
+                  <input type="email" class="form-control" id="email" placeholder="Email">
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" id="subject" placeholder="Asunto">
+                </div>
+                <div class="form-group">
+                  <textarea class="form-control" rows="5" placeholder="Escribe tu mensaje"></textarea>
+                </div>
+                <div class="form-group">
+                  <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+        </div>
       </div>
     </div>
-  </div>
-
-</main>
+  </main>
 </body>
 </html>
