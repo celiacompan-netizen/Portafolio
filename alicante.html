@@ -2,40 +2,42 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <link rel="icon" href="./assets/corazon.ico?v=1"/>
-  <title>Sesión Alicante - Galería</title>
-  <style>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <title>Sesión Alicante</title>
+
+  
+  <link rel="icon" href="./assets/corazon.ico" type="image/x-icon">
+
  
+  <link href="./main.d8e0d294.css?v=1234" rel="stylesheet">
+
+  <style>
     body {
-      background-color: #000 !important;
-      color: #fff !important;
+      background-color: #000;
+      color: #000;
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
     }
 
-    .container {
-      width: 90%;
-      max-width: 1200px;
-      margin: auto;
-      padding: 20px 0;
-    }
-
-    h1, h2 {
+h1, h2 {
       color: #fff;
       text-align: center;
     }
 
-    a {
-      color: #1e90ff;
-      text-decoration: none;
-    }
-    a:hover {
-      color: #afd9ee;
+    .card, .card-block {
+      background-color: #fff;
+      color: #000;
+      border: none;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin: 20px auto;
+      padding: 15px;
+      max-width: 1000px;
     }
 
-    /* Galería */
+  
+
     .gallery {
       display: flex;
       flex-wrap: wrap;
@@ -45,7 +47,7 @@
 
     .gallery-item {
       flex: 1 1 calc(33.333% - 10px);
-      background-color: #111;
+      background-color: #fff;
       border-radius: 8px;
       overflow: hidden;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -58,44 +60,70 @@
 
     .gallery-item:hover {
       transform: scale(1.05);
-      box-shadow: 0 0 15px rgba(255,255,255,0.2);
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
     }
 
     .caption {
-      padding: 10px;
+      padding: 5px;
       text-align: center;
-      color: #fff;
+      font-weight: bold;
+      color: #000;
+      background-color: #fff;
     }
+
+  
+    .back-link {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .back-link a {
+      color: #1e90ff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
   </style>
 </head>
+
 <body>
-  <header class="container">
+  <header>
     <h1>Sesión Alicante</h1>
-    <p style="text-align:center;">
-      <a href="galeria.html">← Volver a la galería</a>
-    </p>
+   
   </header>
 
-  <main class="container">
-    <div class="gallery">
-      <div class="gallery-item">
-        <img src="./assets/images/espada.jpeg" alt="Autorretrato 1">
-      </div>
-  
-       <div class="gallery-item">
-        <img src="./assets/images/dos.jpeg" alt="Autorretrato 1">
-      </div>
-     <div class="gallery-item">
-        <img src="./assets/images/diadema.jpeg" alt="Autorretrato 1">
-      </div>
-       <div class="gallery-item">
-        <img src="./assets/images/hermita.jpeg" alt="Autorretrato 1">
-      </div>
-       <div class="gallery-item">
-        <img src="./assets/images/maria.jpeg" alt="Autorretrato 1">
-      </div>
+  <main>
+    <div class="card">
+      <div class="card-block">
+        <div class="gallery">
+
+         <div class="gallery-item">
+  <img src="./assets/images/espada.jpg" alt="Foto 1 Conservatorio">
+</div>
+           <div class="gallery-item">
+  <img src="./assets/images/dos.jpg" alt="Foto 1 Conservatorio">
+</div>
+ <div class="gallery-item">
+  <img src="./assets/images/diadema.jpg" alt="Foto 1 Conservatorio">
+</div>
+           <div class="gallery-item">
+  <img src="./assets/images/contem.jpg" alt="Foto 1 Conservatorio">
+</div>
+           <div class="gallery-item">
+  <img src="./assets/images/hermita.jpg" alt="Foto 1 Conservatorio">
+</div>
+           <div class="gallery-item">
+  <img src="./assets/images/maria.jpg" alt="Foto 1 Conservatorio">
+</div>
       
+        </div>
+      </div>
     </div>
+
+   
+  <div class="back-link">
+  <a href="galeria.html">← Volver a galería</a>
+</div>
   </main>
 </body>
 </html>
