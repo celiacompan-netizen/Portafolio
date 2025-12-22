@@ -11,52 +11,49 @@
 
   <style>
     body {
-      background-color: #000;
-      color: #000;
+      background-color: #000; /* fondo negro */
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
+      color: #000;
     }
 
     header h1 {
       color: #fff;
       text-align: center;
-      font-family: 'Georgia', serif; /* tipografía diferente */
-      font-size: 3em; /* tamaño mayor como en Conservatorio */
+      font-family: 'Georgia', serif; /* misma tipografía que Conservatorio */
+      font-size: 3em; /* mismo tamaño que Conservatorio */
       margin: 30px 0;
     }
 
     .card {
-      background-color: #fff; /* caja grande blanca de fondo */
-      color: #000;
-      border: none;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      margin: 20px auto 40px;
+      background-color: #fff; /* caja grande blanca */
+      max-width: 1200px;
+      margin: 0 auto 40px;
       padding: 20px;
-      max-width: 1000px;
       border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
     }
 
     .gallery {
       display: flex;
       flex-wrap: wrap;
+      justify-content: center; /* alineación de imágenes como Conservatorio */
       gap: 15px;
-      justify-content: center;
     }
 
     .gallery-item {
       flex: 1 1 calc(33.333% - 10px);
-      background-color: #fff;
-      border-radius: 8px;
       overflow: hidden;
+      border-radius: 8px;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+      background-color: #fff;
       text-align: center;
     }
 
     .gallery-item img {
       width: 100%;
       display: block;
-      border-radius: 8px;
     }
 
     .gallery-item:hover {
