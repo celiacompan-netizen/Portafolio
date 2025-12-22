@@ -1,1 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <meta name="description" content="Galería de fotos de Celia Compañ">
+  <meta name="google" content="notranslate" />
+  <title>Galería de Imágenes - Celia Compañ</title>
+
+  <!-- Estilos principales -->
+  <style>
+    /* Fondo general y estilo de página */
+    html, body {
+      background-color: #000 !important;
+      color: #fff !important;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px 0;
+    }
+
+    h1, h2, h3 {
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    /* Cards estilo portafolio */
+    .card {
+      background-color: #111;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(255,255,255,0.05);
+    }
+
+    /* Galería de imágenes */
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .gallery-item {
+      flex: 1 1 calc(33.333% - 10px);
+      background-color: #222;
+      border-radius: 8px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      display: block;
+    }
+
+    .gallery-item:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(255,255,255,0.2);
+    }
+
+    /* Textos y captions */
+    .caption {
+      padding: 10px;
+      text-align: center;
+      color: #fff;
+    }
+
+    /* Links */
+    a {
+      color: #1e90ff;
+      text-decoration: none;
+    }
+    a:hover {
+      color: #afd9ee;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="container text-center">
+    <h1>Celia Compañ</h1>
+    <p>Galería de Fotografías</p>
+    <p>
+      <a href="https://instagram.com/kicebe" target="_blank">@kicebe</a>
+    </p>
+  </header>
+
+  <main class="container">
+    <div class="card">
+      <h2>Mis Fotos</h2>
+      <div class="gallery">
+        <div class="gallery-item">
+          <img src="./assets/images/yo.jpeg" alt="Foto 1">
+          <div class="caption">Autorretrato</div>
+        </div>
+        <div class="gallery-item">
+          <img src="./assets/images/angela.jpg" alt="Foto 2">
+          <div class="caption">Conservatorio de Danza</div>
+        </div>
+        <div class="gallery-item">
+          <img src="./assets/images/hermita.jpeg" alt="Foto 3">
+          <div class="caption">Sesión en Alicante</div>
+        </div>
+        <div class="gallery-item">
+          <img src="./assets/images/velo.jpeg" alt="Foto 4">
+          <div class="caption">Autorretratos</div>
+        </div>
+        <div class="gallery-item">
+          <img src="./assets/images/fuera.jpg" alt="Foto 5">
+          <div class="caption">Conservatorio de Danza</div>
+        </div>
+        <div class="gallery-item">
+          <img src="./assets/images/blanco.jpeg" alt="Foto 6">
+          <div class="caption">Sesión Alicante</div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+</body>
+</html>
 
