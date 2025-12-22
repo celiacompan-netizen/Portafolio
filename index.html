@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8">
@@ -9,46 +9,38 @@
   <meta name="google" content="notranslate" />
   <meta content="Mashup templates have been developped by Orson.io team" name="author">
 
-
-  <meta name="msapplication-tap-highlight" content="no">
-
   <link rel="icon" href="./assets/favicon.ico?v=1">
-  <title>Mi portafolio</title>  
+  <title>Mi portafolio</title>
 
+  <!-- CSS principal -->
   <link href="./main.d8e0d294.css?v=1234" rel="stylesheet">
 
   <style>
-   
+    /* Fondo general del body */
     body {
-      background-color: #000 !important; /* Fondo negro */
-      background-image: none !important; /* Sin imágenes de fondo */
-      box-shadow: none !important;       /* Sin sombras */
-      color: #fff !important;            /* Texto blanco */
+      background-color: #000 !important;
+      color: #000 !important;
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
     }
-<style>
-/* Fondo blanco para todas las cards y texto negro */
-.card, .card-block {
-  background-color: #fff !important;  
-  color: #000 !important;             
-  border: none !important;
-  box-shadow: none !important;
-}
 
-.education-experience h3,
-.education-experience p,
-.education-experience small {
-  color: #000 !important;            
-  background-color: #fff !important; 
-}
+    /* Cards con fondo blanco y texto negro */
+    .card, .card-block {
+      background-color: #fff !important;
+      color: #000 !important;
+      border: none !important;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+      padding: 15px;
+    }
 
-.language-experience h3, 
-.language-experience small {
-  color: #000 !important;
-}
+    /* Asegurar que todos los textos dentro de cards sean negros */
+    .card h2, .card h3, .card p, .card small, .caption {
+      color: #000 !important;
+    }
 
+    /* Enlaces */
     a {
       color: #1e90ff;
       text-decoration: none;
@@ -58,28 +50,60 @@
       color: #afd9ee;
     }
 
-    .card {
-      background-color: #111;
-      padding: 15px;
-      margin-bottom: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(255,255,255,0.05);
+    /* Imagenes responsive */
+    .img-responsive {
+      max-width: 100%;
+      height: auto;
+      display: block;
     }
+
+    /* Galería de proyectos */
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+    }
+
+    .gallery-item {
+      flex: 1 1 calc(33.333% - 10px);
+      background-color: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      display: block;
+    }
+
+    .gallery-item:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    }
+
+    .caption {
+      padding: 5px;
+      text-align: center;
+      color: #000;
+      background-color: #fff;
+    }
+
   </style>
 </head>
 
-<body class="">
-<div class="background-color-layer" style="background-color: #BEBEBE;"></div>
+<body>
 <main class="content-wrapper">
 
- 
-  <header class="white-text-container section-container">
-    <div class="text-center">
+  <!-- Header -->
+  <header class="section-container">
+    <div style="text-align:center; padding:20px;">
       <h1>Celia Compañ</h1>
       <p>Fotógrafa</p>
       <p>
-        <a class="fa-icon fa-icon-2x" href="https://instagram.com/kicebe" title="@kicebe">
-    
+        <a href="https://instagram.com/kicebe" title="@kicebe">
+          Instagram
         </a>
       </p>
     </div>
@@ -89,10 +113,10 @@
     <div class="row">
       <div class="col-xs-12">
 
-     
+        <!-- Sobre mí -->
         <div class="card">
           <div class="card-block">
-            <h2>Sobre mi</h2>
+            <h2>Sobre mí</h2>
             <div class="row">
               <div class="col-md-4">
                 <p><img src="./assets/images/yo.jpeg" class="img-responsive" alt="Foto"></p>
@@ -106,35 +130,36 @@
           </div>
         </div>
 
-        
-        <div class="card"> 
-          <div class="card-block"> 
-           <h2>
-  <a href="galeria.html" target="_blank" style="color: #fff; text-decoration: none; display: inline-block;">
-  <p>Proyectos</p>
-  </a>
-</h2>
-            <div class="row"> 
+        <!-- Proyectos -->
+        <div class="card">
+          <div class="card-block">
+            <h2>
+              <a href="galeria.html" target="_blank">Proyectos</a>
+            </h2>
+            <div class="row">
               <div class="col-md-4">
-                <img src="./assets/images/angela.jpg" class="img-responsive" alt="Conservatorio de danza de Alicante">
-                <h3 class="h5">Conservatorio de danza de Alicante</h3>
-                <p>Diciembre 2024</p>
+                <div class="gallery-item">
+                  <img src="./assets/images/angela.jpg" alt="Conservatorio de danza de Alicante">
+                  <div class="caption">Conservatorio de danza de Alicante<br>Diciembre 2024</div>
+                </div>
               </div>
               <div class="col-md-4">
-                <img src="./assets/images/hermita.jpeg" class="img-responsive" alt="">
-                <h3 class="h5">Sesión Alicante</h3>
-                <p>Enero 2025</p>
+                <div class="gallery-item">
+                  <img src="./assets/images/hermita.jpeg" alt="Sesión Alicante">
+                  <div class="caption">Sesión Alicante<br>Enero 2025</div>
+                </div>
               </div>
               <div class="col-md-4">
-                <img src="./assets/images/velo.jpeg" class="img-responsive" alt="">
-                <h3 class="h5">Autoretratos</h3>
-                <p>Junio 2025</p>
+                <div class="gallery-item">
+                  <img src="./assets/images/velo.jpeg" alt="Autorretratos">
+                  <div class="caption">Autorretratos<br>Junio 2025</div>
+                </div>
               </div>
             </div>
           </div>
         </div>
 
-       
+        <!-- Educación -->
         <div class="card">
           <div class="card-block">
             <h2>Educación</h2>
@@ -157,7 +182,7 @@
           </div>
         </div>
 
-      
+        <!-- Idiomas -->
         <div class="card">
           <div class="card-block">
             <h2>Idiomas</h2>
@@ -181,97 +206,10 @@
           </div>
         </div>
 
-      
-        <div class="card">
-          <div class="card-block">
-            <h2>Destacado</h2>
-            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-              <!-- Wrapper for slides -->
-              <div class="carousel-inner" role="listbox">
-                <div class="item active">
-                  <img src="./assets/images/fuera.jpg" class="img-responsive" alt="...">
-                  <div class="carousel-caption">
-                    <h3 class="h5">Conservatorio de danza de Alicante</h3>
-                    <p>2024</p>
-                  </div>
-                </div>
-                <div class="item">
-                  <img src="./assets/images/blanco.jpeg" class="img-responsive" alt="...">
-                  <div class="carousel-caption">
-                    <h3 class="h5">Sesión Alicante</h3>
-                    <p>2025</p>
-                  </div>
-                </div>
-                <div class="item">
-                  <img src="./assets/images/flores.jpeg" class="img-responsive" alt="...">
-                  <div class="carousel-caption">
-                    <h3 class="h5">Autoretratos</h3>
-                    <p>2025</p>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Indicators -->
-              <ol class="carousel-indicators">
-                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-              </ol>
-            </div>
-          </div>
-        </div>
-
-        <!-- Redes -->
-        <div class="card">
-          <div class="card-block">
-            <h2>Redes</h2>
-            <div class="row">
-              <div class="col-md-3">
-                <p class="social-buttons">
-                  <a href="https://instagram.com/kicebe" title="@kicebe">
-                    <span class="social-round-icon fa-icon">
-                      <i class="fa fa-instagram"></i>
-                    </span>
-                    @kicebe
-                  </a>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Contacto -->
-        <div class="card">
-          <div class="card-block">
-            <h2>Contacto</h2>
-            <form action="" class="reveal-content">
-              <div class="form-group">
-                <input type="email" class="form-control" id="email" placeholder="Email">
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" id="subject" placeholder="Subject">
-              </div>
-              <div class="form-group">
-                <textarea class="form-control" rows="5" placeholder="Enter your message"></textarea>
-              </div>
-              <div class="form-group">
-                <button type="submit" class=" btn btn-primary">Send message</button>
-              </div> 
-            </form>
-          </div>
-        </div>
-
       </div>
     </div>
   </div>
 
 </main>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function (event) {
-     scrollRevelation('.card');
-  });
-</script>
-<script type="text/javascript" src="./main.bc58148c.js"></script>
 </body>
 </html>
